@@ -18,13 +18,37 @@ html {
   box-sizing: border-box;
 }
 
+.header {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  width: 154px;
+  height: 97px;
+}
+
 .title--main {
-  margin-bottom: 50px;
-  font-size: 20px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.text--center {
+  max-width: 800px;
+  font-size: 30px;
   font-weight: 700;
   color: white;
   text-align: center;
 }
+
+.title--main--ultrabold {
+  font-weight: 900;
+  color: rgb(255, 195, 21);
+  text-shadow: 0 2px 3px rgba(255, 195, 21, 0.3);
+}
+
 .title--roulette {
   font-size: 26px;
   font-weight: 700;
@@ -137,7 +161,7 @@ html {
 
 .drop--block {
   position: relative;
-  margin-top: 114px;
+  margin-top: 50px;
 }
 
 .title--drop {
@@ -238,6 +262,10 @@ html {
 
   #roulette--wheel {
     transform: translateX(-290px);
+  }
+
+  .text--center {
+    font-size: 40px;
   }
 }
 
