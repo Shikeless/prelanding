@@ -34,12 +34,6 @@ const drops = [
   },
 ];
 
-{
-  /* <div class="wheel--item">
-<img class="wheel--item--image" src="" alt="123" />
-</div> */
-}
-
 for (let i = 0; i <= 50; i++) {
   let item = document.createElement("div");
   let img = document.createElement("img");
