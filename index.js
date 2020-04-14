@@ -4,6 +4,8 @@ const modal = document.getElementById("modal");
 const container = document.getElementById("container");
 const modalButton = document.getElementById("modal--button");
 const dropBox = document.getElementById("drop--flexbox");
+const modalImage = document.getElementById("modal--image");
+const modalText = document.getElementById("modal--text");
 
 const drops = [
   { src: "./images/drop_1.png", text: "Случаный нож в профиль" },
@@ -43,7 +45,9 @@ for (let i = 0; i <= 50; i++) {
   let img = document.createElement("img");
   item.classList.add("wheel--item");
   img.classList.add("wheel--item--image");
-  img.src = drops[Math.floor(Math.random() * drops.length)].src;
+  let randomNumber = Math.floor(Math.random() * drops.length);
+  img.alt = drops[randomNumber].text;
+  img.src = drops[randomNumber].src;
   item.appendChild(img);
   wheel.appendChild(item);
 }
@@ -62,6 +66,9 @@ for (drop of drops) {
   dropBox.appendChild(item);
 }
 
+modalText.innerHTML = wheel.childNodes[47].firstChild.alt;
+modalImage.src = wheel.childNodes[47].firstChild.src;
+
 button.addEventListener("click", () => {
   wheel.classList.add("animateSpin");
   setTimeout(() => {
@@ -70,9 +77,10 @@ button.addEventListener("click", () => {
     modal.style.display = "block";
     container.style.pointerEvents = "none";
     container.style.opacity = 0.2;
+    document.body.style.overflow = "hidden";
   }, 5500);
 });
 
 modalButton.addEventListener("click", () => {
-  window.location.href = "https://standoffdrop.ru";
+  window.location.href = "https://standoffdrop.ru/invite/1077125";
 });

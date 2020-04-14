@@ -179,7 +179,8 @@ html {
   flex-wrap: wrap;
 }
 
-.drop--item {
+.drop--item,
+#modal--item {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -191,32 +192,37 @@ html {
   margin: 0px 0px 20px 0px;
 }
 
-.drop--item--image {
+.drop--item--image,
+#modal--image {
   width: 240px;
 }
 
-.drop--item--title {
+.drop--item--title,
+#modal--text {
   position: absolute;
   bottom: 25px;
   font-size: 18px;
   color: #fff;
   font-weight: 600;
-  text-align: center;
+
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
 }
 
 #modal {
-  position: absolute;
+  position: fixed;
   display: none;
   background: #19191a;
   color: #fff;
   width: 310px;
-  padding: 30px;
+  height: auto;
+  padding: 5px 5px;
   left: 0px;
   right: 0px;
-  top: 200px;
+  top: 0px;
+  bottom: 0px;
   margin: auto;
   z-index: 2;
+  overflow-y: auto;
 }
 
 #modal--button {
@@ -249,6 +255,18 @@ html {
 
   to {
     margin-left: -7040px;
+  }
+}
+
+@media only screen and (min-height: 450px) {
+  #modal {
+    height: 390px;
+  }
+}
+
+@media only screen and (min-width: 370px) {
+  #modal {
+    padding: 30px 30px;
   }
 }
 
